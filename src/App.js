@@ -1,23 +1,56 @@
 import logo from './logo.svg';
+import Display from './Display';
+
+
 import './App.css';
 
 function App() {
+
+  /*
+  const usersData = [
+
+    {
+      "userId": "Rakesh.Ranjan@in.bosch.com",
+      "userName": "Rakesh Ranjan",
+      "role": "admin"
+
+    },
+
+    {
+      "userId": "Aditya@in.bosch.com",
+      "userName": "Ranjan",
+      "role": "admin"
+
+    },
+    {
+      "userId": "Ranjan@in.bosch.com",
+      "userName": "Rakesh Ranjan",
+      "role": "user"
+
+    }
+
+  ];
+  */
+
+
+ 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header >
+        Wow Smart
       </header>
+      {
+        usersData.map(user => 
+          
+          <Display duser={user}> </Display> )
+
+         
+
+      }
+
+
+
     </div>
   );
 }
